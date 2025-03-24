@@ -1,3 +1,4 @@
+
 import type { Config } from "tailwindcss";
 
 export default {
@@ -61,7 +62,15 @@ export default {
 					'accent-foreground': 'hsl(var(--sidebar-accent-foreground))',
 					border: 'hsl(var(--sidebar-border))',
 					ring: 'hsl(var(--sidebar-ring))'
-				}
+				},
+				// Custom colors
+				"pizza-orange": "#F97316",
+				"pizza-orange-light": "#FDBA74",
+				"pizza-orange-dark": "#C2410C",
+				"pizza-green": "#4ADE80",
+				"pizza-green-light": "#86EFAC", 
+				"pizza-green-dark": "#16A34A",
+				"pizza-cream": "#FFF7ED",
 			},
 			borderRadius: {
 				lg: 'var(--radius)',
@@ -69,26 +78,47 @@ export default {
 				sm: 'calc(var(--radius) - 4px)'
 			},
 			keyframes: {
-				'accordion-down': {
-					from: {
-						height: '0'
-					},
-					to: {
-						height: 'var(--radix-accordion-content-height)'
-					}
+				"accordion-down": {
+					from: { height: '0' },
+					to: { height: 'var(--radix-accordion-content-height)' }
 				},
-				'accordion-up': {
-					from: {
-						height: 'var(--radix-accordion-content-height)'
-					},
-					to: {
-						height: '0'
-					}
+				"accordion-up": {
+					from: { height: 'var(--radix-accordion-content-height)' },
+					to: { height: '0' }
+				},
+				"fade-in": {
+					"0%": { opacity: '0', transform: 'translateY(10px)' },
+					"100%": { opacity: '1', transform: 'translateY(0)' }
+				},
+				"fade-in-right": {
+					"0%": { opacity: '0', transform: 'translateX(20px)' },
+					"100%": { opacity: '1', transform: 'translateX(0)' }
+				},
+				"fade-in-left": {
+					"0%": { opacity: '0', transform: 'translateX(-20px)' },
+					"100%": { opacity: '1', transform: 'translateX(0)' }
+				},
+				"pulse-gentle": {
+					"0%, 100%": { opacity: '1' },
+					"50%": { opacity: '0.85' }
+				},
+				"float": {
+					"0%, 100%": { transform: 'translateY(0)' },
+					"50%": { transform: 'translateY(-10px)' }
 				}
 			},
 			animation: {
-				'accordion-down': 'accordion-down 0.2s ease-out',
-				'accordion-up': 'accordion-up 0.2s ease-out'
+				"accordion-down": "accordion-down 0.2s ease-out",
+				"accordion-up": "accordion-up 0.2s ease-out",
+				"fade-in": "fade-in 0.7s ease-out forwards",
+				"fade-in-right": "fade-in-right 0.7s ease-out forwards",
+				"fade-in-left": "fade-in-left 0.7s ease-out forwards",
+				"pulse-gentle": "pulse-gentle 3s infinite",
+				"float": "float 6s ease-in-out infinite"
+			},
+			fontFamily: {
+				"cormorant": ["Cormorant Garamond", "serif"],
+				"montserrat": ["Montserrat", "sans-serif"],
 			}
 		}
 	},
